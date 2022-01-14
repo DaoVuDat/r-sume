@@ -1,0 +1,12 @@
+.navItem a::after {
+  display: block;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 300ms;
+}
+
+.navItem:hover a::after {
+  width: 100%;
+}
