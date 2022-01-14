@@ -10,3 +10,16 @@
 .navItem:hover a::after {
   width: 100%;
 }
+
+.header {
+  animation: show 300ms ease-in-out;
+}
+
+@keyframes show {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
