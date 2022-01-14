@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         lato: ['Lato', 'sans-serif'],
+        nautigal: ['TheNautigal', 'cursive'],
       },
     },
   },

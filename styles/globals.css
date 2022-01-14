@@ -24,5 +24,19 @@
   src: local(''), url('/fonts/Lato-Bold.ttf') format('tff');
 }
 
+@font-face {
+  font-family: 'TheNautigal';
+  font-style: normal;
+  font-weight: 400;
+  src: local(''), url('/fonts/TheNautigal-Regular') format('tff');
+}
+
+@font-face {
+  font-family: 'TheNautigal';
+  font-style: bold;
+  font-weight: 700;
+  src: local(''), url('/fonts/TheNautigal-Bold') format('tff');
+}
+
 /* RULE Padding */
 /* PADDING Y = 4rem = 16px*4 = 64px */

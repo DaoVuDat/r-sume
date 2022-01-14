@@ -12,7 +12,11 @@ const NavBar = (): JSX.Element => {
     <div className="container flex justify-between items-center py-8 m-auto">
       <div className={classNames('text-3xl py-4')}>
         <Link href="/">
-          <a className={navLinkItemStyle}>Davu</a>
+          <a
+            className={classNames(navLinkItemStyle, 'font-nautigal font-bold')}
+          >
+            Davu
+          </a>
         </Link>
       </div>
       <nav className="w-full flex justify-end items-center">

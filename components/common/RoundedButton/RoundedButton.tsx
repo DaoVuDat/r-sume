@@ -12,10 +12,10 @@ const RoundedButton = ({
   return (
     <div
       className=" bg-secondary 
-                    px-10 py-3 m-auto
+                    px-10 py-3 m-auto font-bold
                     text-center text-sm text-gray-300
                     border rounded border-secondary
-                    transition duration-300
+                    transition duration-500
                     cursor-pointer
                     hover:bg-secondary_hover hover:border-secondary_hover hover:text-gray-100"
       onClick={onClick}
