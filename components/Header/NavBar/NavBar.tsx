@@ -25,10 +25,9 @@ const NavBar = (): JSX.Element => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  var headerStyles = 'w-screen py-8 z-10 bg-primary ';
+  var headerStyles = 'fixed top-0 w-screen py-8 z-10 bg-primary ';
   if (detach)
-    headerStyles +=
-      ' fixed top-0 py-4 border-b shadow border-white ' + styles.header;
+    headerStyles += 'py-4 border-b shadow border-white ' + styles.header;
 
   return (
     <div className={headerStyles}>
@@ -48,12 +47,12 @@ const NavBar = (): JSX.Element => {
         <nav className="w-full flex justify-end items-center">
           <ul className="w-full flex justify-end items-center m-auto space-x-8 py-4">
             <li className={classNames(navLinkItemStyle, styles.navItem)}>
-              <ScrolledLink to="overview" smooth={true}>
+              <ScrolledLink to="overview" smooth={true} offset={-150}>
                 Overview
               </ScrolledLink>
             </li>
             <li className={classNames(navLinkItemStyle, styles.navItem)}>
-              <ScrolledLink to="projects" smooth={true}>
+              <ScrolledLink to="projects" smooth={true} offset={-150}>
                 Projects
               </ScrolledLink>
             </li>
