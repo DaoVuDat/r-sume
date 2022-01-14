@@ -9,7 +9,7 @@ interface LayerProps {
 
 const Layer = ({ children }: LayerProps): JSX.Element => {
   return (
-    <div className="bg-primary text-secondary_text font-lato">
+    <div className="bg-primary text-secondary_text font-lato min-h-screen relative">
       <NavBar />
       {children}
       <Footer />
