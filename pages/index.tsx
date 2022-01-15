@@ -43,7 +43,10 @@ const Home: NextPage = () => {
       {showScrollToTop && (
         <button
           onClick={() => scrollToTop()}
-          className="fixed bottom-16 right-16"
+          className="fixed bottom-16 right-16 
+                    hover:text-secondary_hover hover:border-secondary_hover
+                    transition duration-300 
+                    border p-2 border-transparent"
         >
           <HiArrowSmUp className="h-6 w-6" />
         </button>
