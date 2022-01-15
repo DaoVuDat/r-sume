@@ -15,6 +15,7 @@ const Hero = (): JSX.Element => {
           alt="profile image"
           width={500}
           height={500}
+          priority={true}
         />
         <div>
           Experience:

@@ -15,7 +15,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 150) {
         setShowScrollToTop(true);
       } else {
         setShowScrollToTop(false);
