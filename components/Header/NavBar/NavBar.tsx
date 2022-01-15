@@ -7,7 +7,7 @@ import styles from './NavBar.module.css';
 import Router, { useRouter } from 'next/router';
 
 const navLinkItemStyle =
-  'hover:text-primary_text hover:text-bold transition duration-300 ';
+  'hover:text-primary_text hover:text-bold transition duration-300 cursor-pointer';
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();
@@ -30,11 +30,13 @@ const NavBar = (): JSX.Element => {
   }, []);
 
   var headerStyles = 'fixed top-0 w-screen py-4 z-10 bg-primary ';
-  if (detach) headerStyles += 'border-b shadow border-white ' + styles.header;
+  if (detach)
+    headerStyles +=
+      'border-b shadow-lg border-slate-400 shadow-slate-100' + styles.header;
 
   return (
     <div className={headerStyles}>
-      <div className={'container flex justify-between items-center m-auto '}>
+      <div className={'container flex justify-between items-center m-auto'}>
         <div className={classNames('text-3xl py-4')}>
           <Link href="/">
             <a
