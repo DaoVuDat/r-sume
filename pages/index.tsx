@@ -3,8 +3,8 @@ import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 import { HiArrowSmUp } from 'react-icons/hi';
-import styles from '@/styles/index.module.css';
 import Head from 'next/head';
+import { Overview } from '@/components/Overview';
 
 const Home: NextPage = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -27,7 +27,7 @@ const Home: NextPage = () => {
   }, []);
 
   return (
-    <div className="container m-auto">
+    <div>
       <Head>
         <title>Davu</title>
         <meta />
@@ -35,7 +35,7 @@ const Home: NextPage = () => {
       <Hero />
 
       <section id="overview" className="h-screen">
-        Overview
+        <Overview />
       </section>
       <section id="projects" className="h-screen">
         Projects

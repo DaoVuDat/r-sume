@@ -2,11 +2,7 @@ import React from 'react';
 import { NavBar } from '@/components/Header/NavBar';
 
 const Header = (): JSX.Element => {
-  return (
-    <div>
-      <NavBar />
-    </div>
-  );
+  return <NavBar />;
 };
 
 export default Header;
