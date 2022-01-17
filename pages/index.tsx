@@ -39,11 +39,14 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
 
-      <section id="overview" className="h-screen">
+      <section id="overview">
         <Overview />
       </section>
       <section id="projects" className="h-screen">
         Projects
+      </section>
+      <section id="education" className="h-screen">
+        Educations
       </section>
       {showScrollToTop && (
         <button

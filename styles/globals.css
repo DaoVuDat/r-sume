@@ -2,39 +2,47 @@
 @tailwind components;
 @tailwind utilities;
 
-/* FONT */
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''), url('/fonts/Lato-Regular.ttf') format('tff');
-}
+/*!* FONT *!*/
+/*@font-face {*/
+/*  font-family: 'Lato';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url('/fonts/Lato-Regular.ttf') format('ttf');*/
+/*}*/
 
-@font-face {
-  font-family: 'Lato';
-  font-style: normal;
-  font-weight: 100;
-  src: local(''), url('/fonts/Lato-Thin.ttf') format('tff');
-}
+/*@font-face {*/
+/*  font-family: 'Lato';*/
+/*  font-style: normal;*/
+/*  font-weight: 100;*/
+/*  src: url('/fonts/Lato-Thin.ttf') format('ttf');*/
+/*}*/
 
-@font-face {
-  font-family: 'Lato';
-  font-weight: 700;
-  src: local(''), url('/fonts/Lato-Bold.ttf') format('tff');
-}
+/*@font-face {*/
+/*  font-family: 'Lato';*/
+/*  font-weight: 700;*/
+/*  src: url('/fonts/Lato-Bold.ttf') format('ttf');*/
+/*}*/
 
-@font-face {
-  font-family: 'TheNautigal';
-  font-style: normal;
-  font-weight: 400;
-  src: local(''), url('/fonts/TheNautigal-Regular') format('tff');
-}
+/*@font-face {*/
+/*  font-family: 'LuxuriousRoman';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url('/fonts/LuxuriousRoman-Regular.ttf') format('tff');*/
+/*}*/
 
-@font-face {
-  font-family: 'TheNautigal';
-  font-weight: 700;
-  src: local(''), url('/fonts/TheNautigal-Bold') format('tff');
-}
+
+/*@font-face {*/
+/*  font-family: 'TheNautigal';*/
+/*  font-style: normal;*/
+/*  font-weight: 400;*/
+/*  src: url('/fonts/TheNautigal-Regular.ttf') format('ttf');*/
+/*}*/
+
+/*@font-face {*/
+/*  font-family: 'TheNautigal';*/
+/*  font-weight: 700;*/
+/*  src: url('/fonts/TheNautigal-Bold.ttf') format('ttf');*/
+/*}*/
 
 /* RULE Padding */
 /* PADDING Y = 4rem = 16px*4 = 64px */

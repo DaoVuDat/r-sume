@@ -33,10 +33,10 @@ const Hero = (): JSX.Element => {
           </div>
         </div>
         <div className="flex flex-col pl-20 flex-1 relative">
-          <h1 className="text-6xl font-bold tracking-widest font-nautigal">
-            I&apos;m Dao Vu Dat
+          <h1 className="text-8xl font-bold tracking-widest font-nautigal">
+            I&apos;m Đào Vũ Đạt.
           </h1>
-          <p className="text-xl text-gray-500 mt-4 font-nautigal tracking-wide">
+          <p className="text-4xl text-secondary_text mt-4 font-nautigal tracking-wide">
             Developer and love listening music.
           </p>
         </div>

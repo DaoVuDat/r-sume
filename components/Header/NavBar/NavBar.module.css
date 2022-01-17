@@ -3,7 +3,7 @@
   content: '';
   width: 0;
   height: 2px;
-  background-color: #fcfcfc;
+  background-color: #a1a1a1;
   transition: width 300ms;
 }
 

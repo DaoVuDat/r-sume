@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { animateScroll as scroll } from 'react-scroll';
 
 const navLinkItemStyle =
-  'hover:text-primary_text hover:text-bold transition duration-300 cursor-pointer';
+  'hover:text-secondary_text hover:text-bold transition duration-300 cursor-pointer';
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();
@@ -38,7 +38,7 @@ const NavBar = (): JSX.Element => {
   return (
     <div className={headerStyles}>
       <div className={'container flex justify-between items-center m-auto'}>
-        <div className={classNames('text-3xl py-4')}>
+        <div className={classNames('text-5xl py-4')}>
           <Link href="/">
             <a
               className={classNames(
@@ -66,6 +66,11 @@ const NavBar = (): JSX.Element => {
               <li className={classNames(navLinkItemStyle, styles.navItem)}>
                 <ScrolledLink to="projects" smooth={true} offset={-100}>
                   Projects
+                </ScrolledLink>
+              </li>
+              <li className={classNames(navLinkItemStyle, styles.navItem)}>
+                <ScrolledLink to="education" smooth={true} offset={-100}>
+                  Education
                 </ScrolledLink>
               </li>
             </ul>
