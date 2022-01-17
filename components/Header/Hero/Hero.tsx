@@ -9,7 +9,7 @@ const iconStyle = `border rounded-sm border-primary p-2
 
 const Hero = (): JSX.Element => {
   return (
-    <section className="mt-4">
+    <section className="mt-16">
       <div className="relative container m-auto">
         <div className="absolute top-4 left-0 flex flex-col space-y-4 justify-start items-start z-10">
           <div className={iconStyle}>
@@ -34,7 +34,7 @@ const Hero = (): JSX.Element => {
         </div>
         <div className="flex flex-col pl-20 flex-1 relative">
           <h1 className="text-6xl font-bold tracking-widest font-nautigal">
-            I&apos;m Đào Vũ Đạt
+            I&apos;m Dao Vu Dat
           </h1>
           <p className="text-xl text-gray-500 mt-4 font-nautigal tracking-wide">
             Developer and love listening music.

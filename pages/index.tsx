@@ -31,7 +31,6 @@ const Home: NextPage = () => {
       <Head>
         <title>Davu</title>
         <meta property="og:title" content="Đào Vũ Đạt - Resumé" />
-        <meta property="og:url" content="daovudat.cf" />
         <meta property="og:image" content="/images/profile.png" />
         <meta
           property="og:description"
