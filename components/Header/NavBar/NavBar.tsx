@@ -4,7 +4,8 @@ import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { Link as ScrolledLink } from 'react-scroll';
 import styles from './NavBar.module.css';
-import Router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
+import { animateScroll as scroll } from 'react-scroll';
 
 const navLinkItemStyle =
   'hover:text-primary_text hover:text-bold transition duration-300 cursor-pointer';
@@ -52,6 +53,11 @@ const NavBar = (): JSX.Element => {
         {pathname !== '/contact' && (
           <nav className="w-full flex justify-end items-center">
             <ul className="w-full flex justify-end items-center m-auto space-x-8 py-4">
+              <li className={classNames(navLinkItemStyle, styles.navItem)}>
+                <a href="#" onClick={() => scroll.scrollToTop()}>
+                  Home
+                </a>
+              </li>
               <li className={classNames(navLinkItemStyle, styles.navItem)}>
                 <ScrolledLink to="overview" smooth={true} offset={-100}>
                   Overview

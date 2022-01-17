@@ -9,7 +9,7 @@ const iconStyle = `border rounded-sm border-primary p-2
 
 const Hero = (): JSX.Element => {
   return (
-    <section className="mt-16">
+    <div className="mt-16">
       <div className="relative container m-auto">
         <div className="absolute top-4 left-0 flex flex-col space-y-4 justify-start items-start z-10">
           <div className={iconStyle}>
@@ -59,7 +59,7 @@ const Hero = (): JSX.Element => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
