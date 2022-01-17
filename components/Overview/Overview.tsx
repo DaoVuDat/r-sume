@@ -12,7 +12,9 @@ const Overview = () => {
     <div className="mt-8 pt-8">
       {/*EXPERIENCE SECTION*/}
       <div className="container m-auto">
-        <p className="ml-24 tracking-wide text-secondary_text">Experience :</p>
+        <h3 className="ml-24 tracking-wide text-secondary_text font-nautigal font-bold text-3xl tracking-widest">
+          Experience:
+        </h3>
         <ul className="mt-8 flex space-x-8 h-32 justify-between">
           <li className={listIconStyle}>
             <a href="https://www.reactjs.org" target="_blank" rel="noreferrer">

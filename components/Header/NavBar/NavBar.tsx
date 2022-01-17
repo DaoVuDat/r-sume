@@ -8,7 +8,7 @@ import { useRouter } from 'next/router';
 import { animateScroll as scroll } from 'react-scroll';
 
 const navLinkItemStyle =
-  'hover:text-secondary_text hover:text-bold transition duration-300 cursor-pointer';
+  'hover:text-secondary_text font-normal transition duration-300 cursor-pointer';
 
 const NavBar = (): JSX.Element => {
   const router = useRouter();
