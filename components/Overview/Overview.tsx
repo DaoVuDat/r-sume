@@ -50,7 +50,7 @@ const Overview = () => {
         </ul>
       </div>
       {/* ABOUT ME SECTION */}
-      <div className="mt-16 flex justify-between">
+      <div className="mt-16 flex">
         <div>
           <div className="w-[400px] h-[500px] relative">
             <Image
@@ -62,8 +62,11 @@ const Overview = () => {
             />
           </div>
         </div>
-        <div className="flex flex-col justify-start">
-          <h2 className="text-4xl font-luxurious">About Me.</h2>
+        <div className="flex-1 pl-16">
+          <h2 className="text-6xl text-center font-nautigal">About Me.</h2>
+          <div className="container">
+            content content content content content
+          </div>
         </div>
       </div>
     </div>

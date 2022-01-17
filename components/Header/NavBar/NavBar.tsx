@@ -59,17 +59,17 @@ const NavBar = (): JSX.Element => {
                 </a>
               </li>
               <li className={classNames(navLinkItemStyle, styles.navItem)}>
-                <ScrolledLink to="overview" smooth={true} offset={-100}>
+                <ScrolledLink to="overview" smooth={true} offset={-120}>
                   Overview
                 </ScrolledLink>
               </li>
               <li className={classNames(navLinkItemStyle, styles.navItem)}>
-                <ScrolledLink to="projects" smooth={true} offset={-100}>
+                <ScrolledLink to="projects" smooth={true} offset={-120}>
                   Projects
                 </ScrolledLink>
               </li>
               <li className={classNames(navLinkItemStyle, styles.navItem)}>
-                <ScrolledLink to="education" smooth={true} offset={-100}>
+                <ScrolledLink to="education" smooth={true} offset={-120}>
                   Education
                 </ScrolledLink>
               </li>
