@@ -11,14 +11,14 @@ const iconStyle = `border rounded-sm border-primary p-2
 const options = {
   strings: [
     'Welcome to my online resumé !',
-    'My name is <strong>Đào Vũ Đạt</strong>.',
+    'My name is <strong>Đào Vũ Đạt </strong>.',
     `I am ${new Date().getFullYear() - 1996} years old now.`,
     'I am currently working with <strong>ReactJS</strong>',
-    'And learning <strong>.net core</strong> for Webservice.',
+    'And learning <strong>.Net Core </strong>  for <strong>Webservice</strong>.',
     'I have grand passionate listening music.',
     'Playing some video games in my spare time.',
     'You could find my all information on this website.',
-    'Please <strong>contact</strong> me if you need anything.',
+    'Please <strong>contact </strong>  me if you need anything.',
   ],
   backDelay: 1000,
   typeSpeed: 60,
@@ -66,11 +66,11 @@ const Hero = (): JSX.Element => {
         </div>
         <div className="pl-20 relative">
           <h1 className="text-8xl font-bold tracking-widest font-nautigal">
-            I&apos;m Đào Vũ Đạt.
+            Đào Vũ Đạt.
           </h1>
           <span
             id="hero-sub"
-            className="text-3xl text-secondary_text mt-6 font-nautigal tracking-wide h-8"
+            className="text-xl text-secondary_text mt-6 tracking-wide h-8"
           />
         </div>
       </div>
