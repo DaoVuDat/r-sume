@@ -30,10 +30,9 @@ const NavBar = (): JSX.Element => {
     return () => window.removeEventListener('scroll', toggleVisibility);
   }, []);
 
-  var headerStyles = 'fixed top-0 w-screen py-4 z-50 bg-primary ';
+  let headerStyles = 'fixed top-0 left-0 w-screen py-4 z-50 bg-primary ';
   if (detach)
-    headerStyles +=
-      'border-b shadow-lg border-slate-400 shadow-slate-100' + styles.header;
+    headerStyles += 'border-b shadow-lg border-slate-400 shadow-slate-700';
 
   return (
     <div className={headerStyles}>
