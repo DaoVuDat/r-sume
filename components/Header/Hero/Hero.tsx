@@ -75,9 +75,9 @@ const Hero = (): JSX.Element => {
         </div>
       </div>
 
-      <div className="relative w-screen overflow-hidden">
+      <div className="relative w-screen overflow-x-hidden">
         {/* BACKGROUND */}
-        <div className="absolute left-0 bottom-0 w-full ">
+        <div className="absolute left-0 bottom-0 w-full">
           <Wave />
         </div>
         <div className="flex items-center justify-center">
