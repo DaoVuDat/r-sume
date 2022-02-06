@@ -5,6 +5,7 @@ import { animateScroll as scroll } from 'react-scroll';
 import { HiArrowSmUp } from 'react-icons/hi';
 import Head from 'next/head';
 import { Overview } from '@/components/Overview';
+import { Projects } from '@/components/Projects';
 
 const Home: NextPage = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -39,11 +40,11 @@ const Home: NextPage = () => {
       </Head>
       <Hero />
 
-      <section id="overview">
+      <section id="overview" className="mt-16">
         <Overview />
       </section>
-      <section id="projects" className="h-screen">
-        Projects
+      <section id="projects" className="pt-16">
+        <Projects />
       </section>
       <section id="education" className="h-screen">
         Educations

@@ -49,7 +49,7 @@ const NavBar = (): JSX.Element => {
             </a>
           </Link>
         </div>
-        {pathname !== '/contact' && (
+        {pathname.match(/\/(#*)$/g)?.[0] && (
           <nav className="w-full flex justify-end items-center">
             <ul className="w-full flex justify-end items-center m-auto space-x-8 py-4">
               <li className={classNames(navLinkItemStyle, styles.navItem)}>

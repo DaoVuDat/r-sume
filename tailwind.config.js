@@ -17,6 +17,25 @@ module.exports = {
         lato: ['Lato', 'sans-serif'],
         nautigal: ['The Nautigal', 'cursive'],
       },
+      transitionProperty: {
+        width: 'width',
+      },
+      keyframes: {
+        'custom-translate': {
+          '0%': {
+            transform: 'translateX(0px)',
+          },
+          '50%': {
+            transform: 'translateX(5px)',
+          },
+          '100%': {
+            transform: 'translateX(0px)',
+          },
+        },
+      },
+      animation: {
+        'custom-translate': 'custom-translate 3s ease-in-out infinite',
+      },
     },
   },
   plugins: [],

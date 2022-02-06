@@ -2,7 +2,7 @@ import React from 'react';
 
 interface RoundedButtonProps {
   children: React.ReactNode;
-  onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+  onClick: (event: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 const RoundedButton = ({
@@ -10,9 +10,9 @@ const RoundedButton = ({
   onClick,
 }: RoundedButtonProps): JSX.Element => {
   return (
-    <div
+    <button
       className=" bg-secondary 
-                    px-10 py-3 m-auto font-bold
+                    px-10 py-3 font-bold
                     text-center text-sm text-gray-300
                     border rounded border-secondary
                     transition duration-500
@@ -21,7 +21,7 @@ const RoundedButton = ({
       onClick={onClick}
     >
       {children}
-    </div>
+    </button>
   );
 };
 
