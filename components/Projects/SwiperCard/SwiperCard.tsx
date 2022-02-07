@@ -169,8 +169,12 @@ const SwiperCard = () => {
             </animated.p>
           ))}
         </div>
-        <div className="">
-          <a href={sampleData[selectIndex].link} target="_no">
+        <div>
+          <a
+            href={sampleData[selectIndex].link}
+            target={sampleData[selectIndex].link !== '' ? '_blank' : ''}
+            rel="noreferrer"
+          >
             <RoundedButton onClick={() => {}}>Explore</RoundedButton>
           </a>
         </div>
