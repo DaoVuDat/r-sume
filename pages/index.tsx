@@ -6,6 +6,7 @@ import { HiArrowSmUp } from 'react-icons/hi';
 import Head from 'next/head';
 import { Overview } from '@/components/Overview';
 import { Projects } from '@/components/Projects';
+import { Education } from '@/components/Education';
 
 const Home: NextPage = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -46,8 +47,8 @@ const Home: NextPage = () => {
       <section id="projects" className="mt-16">
         <Projects />
       </section>
-      <section id="education" className="h-screen mt-32">
-        Educations
+      <section id="education" className="mt-16">
+        <Education />
       </section>
       {showScrollToTop && (
         <button
