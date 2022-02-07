@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next';
 
 const AboutPage = () => {
-  return <div>CONTENT</div>;
+  return <div className="mt-16">CONTENT</div>;
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {

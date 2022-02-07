@@ -16,7 +16,7 @@ const Overview = () => {
     <div>
       {/*EXPERIENCE SECTION*/}
       <div className="container m-auto">
-        <h3 className="ml-24 tracking-wide text-secondary_text font-nautigal font-bold text-3xl tracking-widest">
+        <h3 className="ml-24 text-secondary_text font-nautigal font-bold text-3xl tracking-widest">
           Experience:
         </h3>
         <ul className="mt-8 flex space-x-8 h-32 justify-between">
@@ -71,7 +71,7 @@ const Overview = () => {
         <div className="flex-1 pl-16">
           <div className="w-2/3 mx-auto">
             <h2 className="text-6xl font-nautigal">About Me.</h2>
-            <div className="tracking-widest mt-4">
+            <div className="tracking-widest leading-relaxed mt-4">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
               accusantium dignissimos ea eos excepturi explicabo impedit itaque,
               minima, molestiae molestias nisi quam quia quidem sunt suscipit.
