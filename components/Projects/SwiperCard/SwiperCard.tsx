@@ -106,7 +106,7 @@ const SwiperCard = () => {
   return (
     // Image Section
     <div className="w-full lg:w-2/3 mx-auto bg-[#3C4756] rounded-sm rounded-br-3xl overflow-hidden shadow-lg shadow-gray-800">
-      <div className="h-80 z-10 overflow-hidden">
+      <div className="h-80 w-full z-10 overflow-hidden">
         {dataTransition(({ opacity, transform }, item) => (
           <animated.div
             className="relative w-full h-full"

@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
 import {
   NetCoreIcon,
@@ -114,19 +113,17 @@ const Overview = () => {
               </div>
             </div>
             <div className="mt-8 text-lg font-bold flex justify-end">
-              <Link href="/about">
-                <a
-                  className="transition duration-300 hover:text-secondary_text
+              <a
+                className="cursor-pointer transition duration-300 hover:text-secondary_text
                     after:block after:content-[''] after:w-0 after:h-[2px] after:bg-secondary_text
                     after:transition-[width] after:duration-300 after:hover:w-full
                   "
-                >
-                  Explore
-                  <span className="inline-block w-5 ml-2 animate-custom-translate">
-                    &rarr;
-                  </span>
-                </a>
-              </Link>
+              >
+                Explore
+                <span className="inline-block w-5 ml-2 animate-custom-translate">
+                  &rarr;
+                </span>
+              </a>
             </div>
           </div>
         </div>

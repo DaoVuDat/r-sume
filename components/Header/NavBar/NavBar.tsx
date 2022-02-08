@@ -1,5 +1,4 @@
 import { RoundedButton } from '@/components/common/RoundedButton';
-import Link from 'next/link';
 import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { Link as ScrolledLink } from 'react-scroll';
@@ -15,6 +14,10 @@ const NavBar = (): JSX.Element => {
   const [detach, setDetach] = useState(false);
 
   const pathname = router.pathname;
+
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -38,16 +41,12 @@ const NavBar = (): JSX.Element => {
     <div className={headerStyles}>
       <div className={'container flex justify-between items-center m-auto'}>
         <div className={classNames('text-5xl py-4')}>
-          <Link href="/">
-            <a
-              className={classNames(
-                navLinkItemStyle,
-                'font-nautigal font-bold'
-              )}
-            >
-              Davu
-            </a>
-          </Link>
+          <a
+            onClick={() => scrollToTop()}
+            className={classNames(navLinkItemStyle, 'font-nautigal font-bold')}
+          >
+            Davu
+          </a>
         </div>
         {pathname.match(/\/(#*)$/g)?.[0] && (
           <nav className="w-full flex justify-end items-center">
@@ -76,13 +75,9 @@ const NavBar = (): JSX.Element => {
           </nav>
         )}
         <div className="ml-12">
-          <Link href="/contact">
-            <a>
-              <RoundedButton onClick={() => console.log('Button Click')}>
-                Contact
-              </RoundedButton>
-            </a>
-          </Link>
+          <RoundedButton onClick={() => console.log('Button Click')}>
+            Contact
+          </RoundedButton>
         </div>
       </div>
     </div>
