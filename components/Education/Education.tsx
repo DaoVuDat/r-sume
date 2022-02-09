@@ -1,5 +1,4 @@
 import React from 'react';
-import { useSpring, animated } from '@react-spring/web';
 import { MileStone } from '@/components/Education/MileStone';
 
 const Education = () => {
@@ -12,14 +11,26 @@ const Education = () => {
       after:block after:top-4 after:bottom-0 after:left-1/4 after:z-10 after:transform after:-translate-x-1/2"
       >
         <Circle />
-        <MileStone className="mt-16" point="Future Planning">
-          IELTS + abroad study
+        <MileStone point="Future Planning">
+          <div>Learning creating Webservice ( ASP.NET )</div>
+          <div>Getting IELTS certificate</div>
+          <div>Continuing studying (Postgraduate)</div>
         </MileStone>
         <MileStone point="11/2019">HCMUS Graduation</MileStone>
-        <MileStone point="08/2019">TOEFL ITP (score 556)</MileStone>
-        <MileStone point="04/2017">Internship Studio-S60</MileStone>
-        <MileStone className="mb-8" point="10/2014">
-          HCMUS Admission
+        <MileStone point="08/2019">
+          <div>English Certificate</div>
+          <div>TOEFL ITP (score 556) - Expired</div>
+        </MileStone>
+        <MileStone point="04/2017">
+          <div>Internship at Studio 60 - Front End Position</div>
+          <div>Learning HTML, CSS and Javascript</div>
+          <div>Using Photoshop for getting information</div>
+        </MileStone>
+        <MileStone className="mb-4" point="10/2014">
+          <div>
+            Đại Học Khoa Học Tự Nhiên TpHCM (HCMUS) Undergraduate Admission
+          </div>
+          <div>Computer Science Faculty</div>
         </MileStone>
         <span
           className="absolute bottom-0 left-1/4 transform -translate-x-1/2

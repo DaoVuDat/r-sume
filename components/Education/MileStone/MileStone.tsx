@@ -1,5 +1,5 @@
 import React, { ReactNode, useEffect, useRef } from 'react';
-import { useSpring, animated, SpringRef } from '@react-spring/web';
+import { useAnimation, motion, AnimationControls } from 'framer-motion';
 import classNames from 'classnames';
 import useOnScreen from '../../../hooks/useOnScreen';
 
@@ -7,33 +7,59 @@ interface MileStoneProps {
   point: string;
   children: ReactNode;
   className?: string;
-  springRefApiOnContent?: SpringRef<any> | null;
+  controls?: AnimationControls;
 }
 
-const MileStone = (props: MileStoneProps): JSX.Element => {
-  const { children, className = '', point, springRefApiOnContent } = props;
-  const divRef = useRef<HTMLDivElement>(null);
-
-  const [pointStyle, pointApi] = useSpring(() => ({
-    from: {
-      x: 50,
-      opacity: 0,
+const listVariant = {
+  initial: {},
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+      ease: 'easeInOut',
     },
-  }));
+  },
+};
+
+const itemVariant = {
+  initial: {
+    y: 20,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const MileStone = (props: MileStoneProps): JSX.Element => {
+  const { children, className = '', point } = props;
+
+  const titleControl = useAnimation();
+  const listControl = useAnimation();
+
+  const divRef = useRef<HTMLDivElement>(null);
+  const divChildren = React.Children.toArray(children);
 
   const isIntersecting = useOnScreen(divRef);
 
   useEffect(() => {
     if (isIntersecting) {
       // trigger animation
-      console.log('intersecting');
-      pointApi({
-        x: 0,
-        opacity: 1,
-        config: {
-          duration: 400,
-        },
-      });
+
+      const sequence = async () => {
+        await titleControl.start({
+          x: 0,
+          opacity: 1,
+          transition: { duration: 0.7 },
+        });
+        return await listControl.start('animate');
+      };
+      sequence().then();
     }
     return () => {};
   }, [isIntersecting]);
@@ -41,18 +67,33 @@ const MileStone = (props: MileStoneProps): JSX.Element => {
   return (
     <div
       ref={divRef}
-      className={classNames('flex justify-end min-h-[200px] z-20 ', className)}
+      className={classNames(
+        'mt-24 flex justify-end min-h-[100px] z-20 ',
+        className
+      )}
     >
       <div className="relative w-3/4">
         <Item />
         <div className="pl-8 ">
-          <animated.div
-            style={pointStyle}
-            className="text-2xl font-bold tracking-wide"
+          <motion.div
+            initial={{ x: 100, opacity: 0 }}
+            animate={titleControl}
+            className="text-4xl font-bold tracking-wide"
           >
             {point}
-          </animated.div>
-          <div className="mt-4 tracking-wide">{children}</div>
+          </motion.div>
+          <motion.div
+            initial="initial"
+            variants={listVariant}
+            animate={listControl}
+            className="mt-4 tracking-wide space-y-4"
+          >
+            {divChildren.map((item, index) => (
+              <motion.div key={index} variants={itemVariant}>
+                {item}
+              </motion.div>
+            ))}
+          </motion.div>
         </div>
       </div>
     </div>
