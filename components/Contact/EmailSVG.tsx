@@ -1,17 +1,16 @@
 import React from 'react';
-import classNames from 'classnames';
 
 interface EmailSVGProps {
   className?: string;
 }
 
-const EmailSVG = ({ className = '' }): JSX.Element => {
+const EmailSVG = ({ className = '' }: EmailSVGProps): JSX.Element => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 456.79 367.68"
-      className={classNames('w-full h-full', className)}
+      className={className}
     >
       <defs>
         <path

@@ -3,7 +3,48 @@ import EmailSVG from '@/components/Contact/EmailSVG';
 import { RoundedButton } from '@/components/common/RoundedButton';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
 
+interface FormElements extends HTMLFormControlsCollection {
+  name: HTMLInputElement;
+  email: HTMLInputElement;
+  message: HTMLTextAreaElement;
+}
+
+interface CustomFormElements extends FormElements {
+  readonly elements: FormElements;
+}
+
 const Contact = () => {
+  const onSubmitHandler = async (event: React.SyntheticEvent) => {
+    event.preventDefault();
+
+    const target = event.target as typeof event.target & {
+      name: HTMLInputElement;
+      email: HTMLInputElement;
+      message: HTMLTextAreaElement;
+    };
+
+    const res = await fetch('/api/send-message', {
+      body: JSON.stringify({
+        name: target.name.value,
+        email: target.email.value,
+        message: target.message.value,
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      method: 'POST',
+    });
+
+    const { error } = await res.json();
+
+    if (error) {
+      console.log(error);
+      return;
+    }
+
+    console.log('success');
+  };
+
   return (
     <>
       <h2 className="pt-8 container mx-auto font-nautigal text-6xl">
@@ -15,7 +56,10 @@ const Contact = () => {
             To request a quote or want to meet up for coffee, contact me
             directly or fill out the form and we will get back to you promptly.
           </p>
-          <form className="mt-8 w-[500px]  text-gray-300 space-y-4">
+          <form
+            onSubmit={onSubmitHandler}
+            className="mt-8 w-[500px]  text-gray-300 space-y-4"
+          >
             <div className="flex flex-col space-y-2">
               <label htmlFor="name">Your Name</label>
               <input
@@ -48,10 +92,10 @@ const Contact = () => {
           </form>
         </div>
         <div className="w-1/2  tracking-wide text-[#EAE0FF]">
-          <EmailSVG className="h-[250px]" />
+          <EmailSVG className="h-[300px] w-full" />
           <div className="mt-16 flex items-center">
             <span>
-              <HiLocationMarker size={24} />
+              <HiLocationMarker size={20} />
             </span>
             <span className="ml-4">
               Nguyen Thai Binh Street, Ward 4, Tan Binh District, HCMC
@@ -59,13 +103,13 @@ const Contact = () => {
           </div>
           <div className="flex mt-3 items-center">
             <span>
-              <HiPhone size={24} />
+              <HiPhone size={20} />
             </span>
             <span className="ml-4">(093) 143 5335</span>
           </div>
           <div className="flex mt-3 items-center">
             <span>
-              <HiMail size={24} />
+              <HiMail size={20} />
             </span>
             <span className="ml-4">dat.daovu@gmail.com</span>
           </div>
