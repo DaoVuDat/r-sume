@@ -59,7 +59,11 @@ const Hero = (): JSX.Element => {
             </a>
           </div>
           <div className={iconStyle}>
-            <a href="https://www.github.com" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.github.com/DaoVuDat"
+              target="_blank"
+              rel="noreferrer"
+            >
               <FaGithub />
             </a>
           </div>

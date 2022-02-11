@@ -75,9 +75,11 @@ const NavBar = (): JSX.Element => {
           </nav>
         )}
         <div className="ml-12">
-          <RoundedButton onClick={() => console.log('Button Click')}>
-            Contact
-          </RoundedButton>
+          <ScrolledLink to="contact" smooth={true} offset={-120}>
+            <RoundedButton onClick={() => console.log('Button Click')}>
+              Contact
+            </RoundedButton>
+          </ScrolledLink>
         </div>
       </div>
     </div>

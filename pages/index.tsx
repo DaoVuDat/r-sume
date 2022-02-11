@@ -7,6 +7,7 @@ import Head from 'next/head';
 import { Overview } from '@/components/Overview';
 import { Projects } from '@/components/Projects';
 import { Education } from '@/components/Education';
+import { Contact } from '@/components/Contact';
 
 const Home: NextPage = () => {
   const [showScrollToTop, setShowScrollToTop] = useState(false);
@@ -49,6 +50,9 @@ const Home: NextPage = () => {
       </section>
       <section id="education" className="mt-16">
         <Education />
+      </section>
+      <section id="contact" className="mt-16 mb-16">
+        <Contact />
       </section>
       {showScrollToTop && (
         <button
