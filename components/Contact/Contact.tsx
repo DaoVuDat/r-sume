@@ -1,38 +1,31 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { send, sendForm } from '@emailjs/browser';
 import EmailSVG from '@/components/Contact/EmailSVG';
 import { RoundedButton } from '@/components/common/RoundedButton';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
 
 const Contact = () => {
+  const formRef = useRef<HTMLFormElement>(null);
   const onSubmitHandler = async (event: React.SyntheticEvent) => {
     event.preventDefault();
 
-    const target = event.target as typeof event.target & {
+    const { name, email, message } = event.target as typeof event.target & {
       name: HTMLInputElement;
       email: HTMLInputElement;
       message: HTMLTextAreaElement;
     };
 
-    const res = await fetch('/api/send-message', {
-      body: JSON.stringify({
-        name: target.name.value,
-        email: target.email.value,
-        message: target.message.value,
-      }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      method: 'POST',
-    });
-
-    const { error } = await res.json();
-
-    if (error) {
+    try {
+      const result = await sendForm(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        formRef.current!,
+        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+      );
+    } catch (error) {
       console.log(error);
       return;
     }
-
-    console.log('success');
   };
 
   return (
@@ -47,6 +40,7 @@ const Contact = () => {
             directly or fill out the form and we will get back to you promptly.
           </p>
           <form
+            ref={formRef}
             onSubmit={onSubmitHandler}
             className="mt-8 w-[500px]  text-gray-300 space-y-4"
           >

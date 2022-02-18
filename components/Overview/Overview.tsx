@@ -64,8 +64,8 @@ const Overview = () => {
               Looking for a company in order to apply my experiences and gain my
               knowledge. In addition, I am be able to accumulate my experience
               during working with professional colleagues. I am always eager to
-              learn new skills to support my future career. Therefor, I could be
-              better in working as a team or as myself.
+              learn new skills to support my future career. Therefore, I could
+              be better in working as a team or as myself.
               <div className="flex mt-6">
                 <HiOutlineCheckCircle size={28} />
                 <div className="ml-8">
