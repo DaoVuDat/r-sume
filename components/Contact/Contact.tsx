@@ -3,11 +3,6 @@ import EmailSVG from '@/components/Contact/EmailSVG';
 import { RoundedButton } from '@/components/common/RoundedButton';
 import { HiLocationMarker, HiPhone, HiMail } from 'react-icons/hi';
 
-interface FormElements extends HTMLFormControlsCollection {
-  name: HTMLInputElement;
-  email: HTMLInputElement;
-  message: HTMLTextAreaElement;
-}
 const Contact = () => {
   const onSubmitHandler = async (event: React.SyntheticEvent) => {
     event.preventDefault();
