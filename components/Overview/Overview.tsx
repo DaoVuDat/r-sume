@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
 import {
-  NetCoreIcon,
   NextJsIcon,
   ReactIcon,
   TailwindIcon,
@@ -15,10 +14,10 @@ const Overview = () => {
     <div>
       {/*EXPERIENCE SECTION*/}
       <div className="container m-auto">
-        <h3 className="ml-24 text-secondary_text font-nautigal font-bold text-3xl tracking-widest">
+        <h3 className="ml-24 font-nautigal font-bold text-3xl tracking-widest">
           Experience:
         </h3>
-        <ul className="mt-8 flex space-x-8 h-32 justify-between">
+        <ul className="mt-8 flex h-32 justify-between">
           <li className={listIconStyle}>
             <a href="https://www.reactjs.org" target="_blank" rel="noreferrer">
               <ReactIcon />
@@ -43,15 +42,6 @@ const Overview = () => {
               <TailwindIcon />
             </a>
           </li>
-          <li className={listIconStyle}>
-            <a
-              href="https://dotnet.microsoft.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <NetCoreIcon />
-            </a>
-          </li>
         </ul>
       </div>
       {/* ABOUT ME SECTION */}
@@ -71,22 +61,33 @@ const Overview = () => {
           <div className="w-2/3 mx-auto">
             <h2 className="text-6xl font-nautigal">About Me.</h2>
             <div className="tracking-widest leading-relaxed mt-4">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-              accusantium dignissimos ea eos excepturi explicabo impedit itaque,
-              minima, molestiae molestias nisi quam quia quidem sunt suscipit.
-              Mollitia recusandae saepe voluptates.
+              Looking for a company in order to apply my experiences and gain my
+              knowledge. In addition, I am be able to accumulate my experience
+              during working with professional colleagues. I am always eager to
+              learn new skills to support my future career. Therefor, I could be
+              better in working as a team or as myself.
               <div className="flex mt-6">
                 <HiOutlineCheckCircle size={28} />
                 <div className="ml-8">
-                  <h3 className="text-xl font-bold pl-2">Creative Idea.</h3>
+                  <h3 className="text-xl font-bold pl-2">Hard Skills.</h3>
                   <ul className="text-base">
                     <li className="mt-6">
                       <span className="inline-block w-4 h-4 rounded-full border-2" />
-                      <span className="ml-8">Find Common Problems</span>
+                      <span className="ml-8">HTML / CSS</span>
                     </li>
                     <li className="mt-6">
                       <span className="inline-block w-4 h-4 rounded-full border-2" />
-                      <span className="ml-8">Research On Problems</span>
+                      <span className="ml-8">ReactJS / NextJS</span>
+                    </li>
+                    <li className="mt-6">
+                      <span className="inline-block w-4 h-4 rounded-full border-2" />
+                      <span className="ml-8">
+                        TailwindCSS and some UI libraries
+                      </span>
+                    </li>
+                    <li className="mt-6">
+                      <span className="inline-block w-4 h-4 rounded-full border-2" />
+                      <span className="ml-8">State Management with Redux</span>
                     </li>
                   </ul>
                 </div>
@@ -94,19 +95,15 @@ const Overview = () => {
               <div className="flex mt-6">
                 <HiOutlineCheckCircle size={28} />
                 <div className="ml-8">
-                  <h3 className="text-xl font-bold pl-2">Problems Solving.</h3>
+                  <h3 className="text-xl font-bold pl-2">Soft Skills.</h3>
                   <ul className="text-base">
-                    <li className="mt-6">
-                      <span className="inline-block w-4 h-4 rounded-full border-2" />
-                      <span className="ml-8">Find Common Problems</span>
-                    </li>
                     <li className="mt-6">
                       <span className="inline-block w-4 h-4 rounded-full border-2" />
                       <span className="ml-8">Research On Problems</span>
                     </li>
                     <li className="mt-6">
                       <span className="inline-block w-4 h-4 rounded-full border-2" />
-                      <span className="ml-8">Find Common Problems</span>
+                      <span className="ml-8">Update New Knowledge</span>
                     </li>
                   </ul>
                 </div>

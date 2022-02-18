@@ -16,19 +16,27 @@ const Education = () => {
           <div>Getting IELTS certificate</div>
           <div>Continuing studying (Postgraduate)</div>
         </MileStone>
-        <MileStone point="11/2019">HCMUS Graduation</MileStone>
+        <MileStone point="03/2020 - Present">
+          <div>
+            Solving Mathematics Optimization Problems in Construction Field
+          </div>
+        </MileStone>
         <MileStone point="08/2019">
-          <div>English Certificate</div>
           <div>TOEFL ITP (score 556) - Expired</div>
         </MileStone>
-        <MileStone point="04/2017">
+        <MileStone point="10/2017 - 01/2018">
+          <div>Capstone Project at CityNow</div>
+          <div>Learning React technology</div>
+          <div>Implementing Website for CityNow</div>
+        </MileStone>
+        <MileStone point="04/2017 - 06/2017">
           <div>Internship at Studio 60 - Front End Position</div>
           <div>Learning HTML, CSS and Javascript</div>
           <div>Using Photoshop for getting information</div>
         </MileStone>
-        <MileStone className="mb-4" point="10/2014">
+        <MileStone className="mb-4" point="10/2014 - 11/2019">
           <div>
-            Đại Học Khoa Học Tự Nhiên TpHCM (HCMUS) Undergraduate Admission
+            Undergraduate Study at Đại Học Khoa Học Tự Nhiên TpHCM (HCMUS)
           </div>
           <div>Computer Science Faculty</div>
         </MileStone>

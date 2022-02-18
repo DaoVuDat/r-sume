@@ -62,7 +62,7 @@ const MileStone = (props: MileStoneProps): JSX.Element => {
       sequence().then();
     }
     return () => {};
-  }, [isIntersecting]);
+  }, [isIntersecting, listControl, titleControl]);
 
   return (
     <div

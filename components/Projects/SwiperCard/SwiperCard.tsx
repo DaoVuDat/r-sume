@@ -5,69 +5,32 @@ import { HiCheck } from 'react-icons/hi';
 import Image from 'next/image';
 import { RoundedButton } from '@/components/common/RoundedButton';
 
-const sampleData = [
-  {
-    image: '/images/projects/sample-project1.jpg',
-    name: 'Dog Breeds',
-    description:
-      'Show dog breeds by using TheDogApi.com. The website has authentication and authorization functionality ' +
-      'and animation. It has also responsive design for mobile and PC.',
-    tech: [
-      'ReactJS',
-      'Typescript',
-      'TailwindCSS v2',
-      'Firebase',
-      'Framer Motion',
-      'Styled Component',
-      'React Hook Form v7',
-    ],
-    link: 'https://dog-breeds.cf',
-    type: 'Learning',
-    time: '08/2021 - 09/2021',
-  },
-  {
-    image: '/images/projects/sample-project2.jpg',
-    name: 'Resume',
-    description: 'The CV online website using NextJS with Typescript.',
-    tech: [
-      'NextJS',
-      'TailwindCSS v3',
-      'React Spring',
-      'Typescript',
-      'Framer Motion',
-    ],
-    link: 'https://daovudat.tk',
-    type: 'Learning',
-    time: '01/2022 - present',
-  },
-  {
-    image: '/images/projects/sample-project3.jpg',
-    name: 'Optimization Projects',
-    description:
-      'Using optimization algorithms in order to solve mathematics problems ' +
-      'in Construction field. For instance, Particle Swarm Optimization (PSO), ' +
-      'Grey Wolf Optimization (GWO) algorithms, etc.',
-    tech: ['Matlab'],
-    link: '',
-    type: 'Freelance',
-    time: '04/2020 - present',
-  },
-];
+interface SwiperCardProps {
+  data: {
+    image: string;
+    name: string;
+    description: string;
+    tech: string[];
+    link: string;
+    type: string;
+    time: string;
+  }[];
+}
 
-const SwiperCard = () => {
+const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
   const [selectIndex, setSelectIndex] = useState(0);
 
-  const dataTransition = useTransition(sampleData[selectIndex], {
+  const dataTransition = useTransition(data[selectIndex], {
     from: { opacity: 0, transform: 'scale(1.1)' },
     enter: { opacity: 1, transform: 'scale(1)' },
     config: {
       duration: 400,
     },
     exitBeforeEnter: true,
-    key: sampleData[selectIndex].name,
+    key: data[selectIndex].name,
   });
 
-  const listItemTransitions = useTransition(sampleData[selectIndex].tech, {
+  const listItemTransitions = useTransition(data[selectIndex].tech, {
     trail: 200,
     from: { opacity: 0 },
     enter: { opacity: 1 },
@@ -75,13 +38,13 @@ const SwiperCard = () => {
       duration: 600,
     },
     exitBeforeEnter: true,
-    keys: (item) => `${sampleData[selectIndex].tech.length}-${item}`,
+    keys: (item) => `${data[selectIndex].tech.length}-${item}`,
   });
 
   useEffect(() => {
     const interval = setInterval(() => {
       setSelectIndex((prevState) => {
-        if (prevState === sampleData.length - 1) {
+        if (prevState === data.length - 1) {
           return 0;
         } else {
           return prevState + 1;
@@ -92,17 +55,17 @@ const SwiperCard = () => {
     return () => {
       clearInterval(interval);
     };
-  }, [selectIndex]);
+  }, [data.length, selectIndex]);
 
   const prevOnClick = () => {
     if (selectIndex === 0) {
-      setSelectIndex(sampleData.length - 1);
+      setSelectIndex(data.length - 1);
       return;
     }
     setSelectIndex(selectIndex - 1);
   };
   const nextOnClick = () => {
-    if (selectIndex === sampleData.length - 1) {
+    if (selectIndex === data.length - 1) {
       setSelectIndex(0);
       return;
     }
@@ -136,7 +99,7 @@ const SwiperCard = () => {
           <div className="flex justify-around">
             <span className="font-bold">{selectIndex + 1}</span>
             <span>of</span>
-            <span className="font-bold">{sampleData.length}</span>
+            <span className="font-bold">{data.length}</span>
           </div>
           <div className="flex justify-between mt-1">
             <button
@@ -177,8 +140,8 @@ const SwiperCard = () => {
         </div>
         <div>
           <a
-            href={sampleData[selectIndex].link}
-            target={sampleData[selectIndex].link !== '' ? '_blank' : ''}
+            href={data[selectIndex].link}
+            target={data[selectIndex].link !== '' ? '_blank' : ''}
             rel="noreferrer"
           >
             <RoundedButton onClick={() => {}}>Explore</RoundedButton>

@@ -8,11 +8,6 @@ interface FormElements extends HTMLFormControlsCollection {
   email: HTMLInputElement;
   message: HTMLTextAreaElement;
 }
-
-interface CustomFormElements extends FormElements {
-  readonly elements: FormElements;
-}
-
 const Contact = () => {
   const onSubmitHandler = async (event: React.SyntheticEvent) => {
     event.preventDefault();
