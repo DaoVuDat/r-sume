@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import { HiOutlineCheckCircle } from 'react-icons/hi';
 import {
   NextJsIcon,
   ReactIcon,
   TailwindIcon,
   TypeScriptIcon,
-} from '@/components/Overview/SVGIcons';
+} from '@/components/Overview/SVG';
+import AboutMeSVG from '@/components/Overview/SVG/AboutMeSVG';
 
 const listIconStyle = `border-2 p-4 rounded-lg border-transparent hover:border-secondary_hover transition duration-300 cursor-pointer`;
 
@@ -48,13 +48,7 @@ const Overview = () => {
       <div className="mt-16 flex">
         <div>
           <div className="w-[400px] h-full relative">
-            <Image
-              className="rounded-br-xl rounded-tr-xl"
-              layout="fill"
-              objectFit="cover"
-              src="/images/aboutme.jpg"
-              alt="Profile image"
-            />
+            <AboutMeSVG />
           </div>
         </div>
         <div className="flex-1 pl-16">
