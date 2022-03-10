@@ -74,7 +74,7 @@ const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
 
   return (
     // Image Section
-    <div className="w-full lg:w-2/3 mx-auto bg-[#3C4756] rounded-sm rounded-br-3xl overflow-hidden shadow-lg shadow-gray-800">
+    <div className="w-full md:w-2/3 mx-auto bg-[#3C4756] rounded-sm md:rounded-br-3xl overflow-hidden shadow-lg shadow-gray-800">
       <div className="h-80 w-full z-10 overflow-hidden">
         {dataTransition(({ opacity, transform }, item) => (
           <animated.div
@@ -84,6 +84,7 @@ const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
             <Image
               layout="fill"
               objectFit="cover"
+              objectPosition="top"
               src={item.image}
               alt={item.name}
               priority
@@ -94,29 +95,41 @@ const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
       </div>
 
       {/* Prev, Next and Explore Button*/}
-      <div className="relative flex py-4 px-8 justify-between">
-        <div className="">
-          <div className="flex justify-around">
-            <span className="font-bold">{selectIndex + 1}</span>
-            <span>of</span>
-            <span className="font-bold">{data.length}</span>
+      <div className="relative flex flex-col md:flex-row py-4 px-8 justify-between items-center">
+        <div className="w-full md:w-auto flex justify-between">
+          <div>
+            <div className="flex space-x-5 md:justify-around">
+              <span className="font-bold">{selectIndex + 1}</span>
+              <span>of</span>
+              <span className="font-bold">{data.length}</span>
+            </div>
+            <div className="flex justify-between mt-1 text-2xl">
+              <button
+                onClick={() => prevOnClick()}
+                className="cursor-pointer transition duration-300 hover:text-secondary_text"
+              >
+                <CgArrowLongLeft />
+              </button>
+              <button
+                onClick={() => nextOnClick()}
+                className="ml-4 lg:ml-8 cursor-pointer transition duration-300 hover:text-secondary_text"
+              >
+                <CgArrowLongRight />
+              </button>
+            </div>
           </div>
-          <div className="flex justify-between mt-1">
-            <button
-              onClick={() => prevOnClick()}
-              className="cursor-pointer transition duration-300 hover:text-secondary_text"
+          <div className="md:hidden">
+            <a
+              href={data[selectIndex].link}
+              target={data[selectIndex].link !== '' ? '_blank' : ''}
+              rel="noreferrer"
             >
-              <CgArrowLongLeft size={24} />
-            </button>
-            <button
-              onClick={() => nextOnClick()}
-              className="ml-8 cursor-pointer transition duration-300 hover:text-secondary_text"
-            >
-              <CgArrowLongRight size={24} />
-            </button>
+              <RoundedButton onClick={() => {}}>Explore</RoundedButton>
+            </a>
           </div>
         </div>
-        <div className="w-[150px] tracking-wider ">
+
+        <div className="w-[150px] tracking-wider self-start mt-4 lg:self-auto lg:mt-0">
           <h3 className="font-bold">Project</h3>
           {dataTransition(({ opacity }, item) => (
             <animated.p
@@ -127,7 +140,7 @@ const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
             </animated.p>
           ))}
         </div>
-        <div className="w-[150px] tracking-wider ">
+        <div className="w-[150px] tracking-wider self-start mt-4 lg:self-auto lg:mt-auto">
           <h3 className="font-bold">Time</h3>
           {dataTransition(({ opacity }, item) => (
             <animated.p
@@ -138,7 +151,7 @@ const SwiperCard = ({ data }: SwiperCardProps): JSX.Element => {
             </animated.p>
           ))}
         </div>
-        <div>
+        <div className="hidden md:block">
           <a
             href={data[selectIndex].link}
             target={data[selectIndex].link !== '' ? '_blank' : ''}

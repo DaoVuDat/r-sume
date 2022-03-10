@@ -3,7 +3,7 @@ import { SwiperCard } from '@/components/Projects/SwiperCard';
 
 const sampleData = [
   {
-    image: '/images/projects/sample-project1.jpg',
+    image: '/images/projects/dog-breeds.png',
     name: 'Dog Breeds',
     description:
       'Show dog breeds by using TheDogApi.com. The website has authentication and authorization functionality ' +
@@ -22,7 +22,7 @@ const sampleData = [
     time: '08/2021 - 09/2021',
   },
   {
-    image: '/images/projects/sample-project2.jpg',
+    image: '/images/projects/resume.png',
     name: 'Resume',
     description: 'The CV online website using NextJS with Typescript.',
     tech: [
@@ -65,8 +65,8 @@ const Projects = () => {
   return (
     <div className="container mx-auto pt-8">
       <div className="w-2/3 mx-auto text-center">
-        <h2 className="font-nautigal text-6xl">My Projects.</h2>
-        <h3 className="w-[600px] mx-auto mt-6 tracking-widest leading-relaxed">
+        <h2 className="text-5xl font-nautigal lg:text-6xl">My Projects.</h2>
+        <h3 className="w-full text-left md:text-center lg:w-[600px] mx-auto mt-6 tracking-widest leading-relaxed">
           Applying my knowledge from internet and books in order to build
           case-study projects for future career. Some are for freelance, and
           they are mostly about mathematics problems in Matlab language. Click

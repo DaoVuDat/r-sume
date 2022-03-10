@@ -43,7 +43,7 @@ const Hero = (): JSX.Element => {
   return (
     <div className="mt-16">
       <div className="relative container m-auto">
-        <div className="absolute top-4 left-0 space-y-4 z-10">
+        <div className="absolute top-0 left-4 lg:top-4 lg:left-0 space-y-2 z-10">
           <div className={iconStyle}>
             <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
               <FaFacebookF />
@@ -68,18 +68,18 @@ const Hero = (): JSX.Element => {
             </a>
           </div>
         </div>
-        <div className="pl-20 relative">
-          <h1 className="text-8xl font-bold tracking-widest font-nautigal">
+        <div className="pl-16 lg:pl-20 relative">
+          <h1 className="text-5xl lg:text-8xl font-bold tracking-widest font-nautigal">
             Đào Vũ Đạt.
           </h1>
           <span
             id="hero-sub"
-            className="text-xl text-secondary_text mt-6 tracking-wide h-8"
+            className="text-base lg:text-xl text-secondary_text mt-6 tracking-wide h-32 lg:h-8"
           />
         </div>
       </div>
 
-      <div className="relative w-screen overflow-x-hidden">
+      <div className="mt-8 relative w-screen overflow-x-hidden">
         {/* BACKGROUND */}
         <div className="absolute left-0 bottom-0 w-full">
           <Wave />

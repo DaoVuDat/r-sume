@@ -12,7 +12,7 @@ const Education = () => {
       >
         <Circle />
         <MileStone point="Future Planning">
-          <div>Learning creating Webservice ( ASP.NET )</div>
+          <div>Learning to create Webservice</div>
           <div>Getting IELTS certificate</div>
           <div>Continuing studying (Postgraduate)</div>
         </MileStone>

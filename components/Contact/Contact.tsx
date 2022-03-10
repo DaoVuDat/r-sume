@@ -29,10 +29,8 @@ const Contact = () => {
   };
 
   return (
-    <>
-      <h2 className="pt-8 container mx-auto font-nautigal text-6xl">
-        Contact Me.
-      </h2>
+    <div className="container mx-auto">
+      <h2 className="pt-8 font-nautigal text-6xl">Contact Me.</h2>
       <div className="container mx-auto mt-2 flex justify-around space-x-8">
         <div className="w-1/2">
           <p className="leading-relaxed tracking-wider w-[500px]">
@@ -99,7 +97,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
