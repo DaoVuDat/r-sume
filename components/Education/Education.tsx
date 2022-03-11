@@ -4,7 +4,9 @@ import { MileStone } from '@/components/Education/MileStone';
 const Education = () => {
   return (
     <div className="container mx-auto py-16">
-      <h2 className="text-center font-nautigal text-6xl">My Education.</h2>
+      <h2 className="text-center font-nautigal text-5xl lg:text-6xl">
+        My Education.
+      </h2>
       <div
         className="mt-16 w-full relative overflow-hidden z-20
       after:content[''] after:w-[2px] after:bg-gray-600 after:absolute

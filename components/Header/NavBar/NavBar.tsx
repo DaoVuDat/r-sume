@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import React, { useEffect, useState } from 'react';
 import { Link as ScrolledLink } from 'react-scroll';
 import styles from './NavBar.module.css';
-import { useRouter } from 'next/router';
 import { animateScroll as scroll } from 'react-scroll';
 import { HiMenu, HiX } from 'react-icons/hi';
 import { motion, useAnimation } from 'framer-motion';
@@ -12,14 +11,11 @@ const navLinkItemStyle =
   'hover:text-secondary_text font-normal transition duration-300 cursor-pointer';
 
 const NavBar = (): JSX.Element => {
-  const router = useRouter();
   const [detach, setDetach] = useState(false);
   const hamControl = useAnimation();
   const xControl = useAnimation();
   const contentControl = useAnimation();
   const [isOpened, setIsOpened] = useState(false);
-
-  const pathname = router.pathname;
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -204,8 +200,8 @@ const NavBar = (): JSX.Element => {
         </nav>
 
         <div className="mt-32 flex justify-center mx-auto lg:hidden">
-          <ScrolledLink to="contact" smooth={true} offset={-120}>
-            <RoundedButton onClick={() => {}}>Contact</RoundedButton>
+          <ScrolledLink to="contact" smooth={true} offset={-100}>
+            <RoundedButton onClick={toggleMenu}>Contact</RoundedButton>
           </ScrolledLink>
         </div>
       </motion.div>

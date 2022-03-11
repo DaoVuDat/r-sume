@@ -78,7 +78,7 @@ const MileStone = (props: MileStoneProps): JSX.Element => {
           <motion.div
             initial={{ x: 100, opacity: 0 }}
             animate={titleControl}
-            className="text-4xl font-bold tracking-wide"
+            className="text-2xl md:text-4xl font-bold tracking-wide"
           >
             {point}
           </motion.div>
@@ -86,7 +86,7 @@ const MileStone = (props: MileStoneProps): JSX.Element => {
             initial="initial"
             variants={listVariant}
             animate={listControl}
-            className="mt-4 tracking-wide space-y-4"
+            className="mt-4 tracking-wide space-y-4 text-sm md:text-base"
           >
             {divChildren.map((item, index) => (
               <motion.div key={index} variants={itemVariant}>

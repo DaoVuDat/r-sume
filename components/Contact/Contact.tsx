@@ -29,18 +29,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="container mx-auto">
-      <h2 className="pt-8 font-nautigal text-6xl">Contact Me.</h2>
-      <div className="container mx-auto mt-2 flex justify-around space-x-8">
-        <div className="w-1/2">
-          <p className="leading-relaxed tracking-wider w-[500px]">
+    <div className="px-8 container mx-auto">
+      <h2 className="pt-8 font-nautigal text-5xl lg:text-6xl text-center lg:text-left">
+        Contact Me.
+      </h2>
+      <div className="container mx-auto mt-2 flex flex-col md:flex-row md:space-x-4">
+        <div className="w-full lg:w-1/2">
+          <p className="leading-relaxed tracking-wider w-full lg:max-w-[400px]">
             To request a quote or want to meet up for coffee, contact me
             directly or fill out the form and we will get back to you promptly.
           </p>
           <form
             ref={formRef}
             onSubmit={onSubmitHandler}
-            className="mt-8 w-[500px]  text-gray-300 space-y-4"
+            className="mt-8 w-full lg:max-w-[400px] text-sm md:text-base text-gray-300 space-y-4"
           >
             <div className="flex flex-col space-y-2">
               <label htmlFor="name">Your Name</label>
@@ -73,8 +75,10 @@ const Contact = () => {
             </div>
           </form>
         </div>
-        <div className="w-1/2  tracking-wide text-[#EAE0FF]">
-          <EmailSVG className="h-[300px] w-full" />
+        <div className="w-full mt-16 lg:mt-0 lg:w-1/2 tracking-wide text-[#EAE0FF]">
+          <div className="w-full lg:max-w-[400px] flex justify-center">
+            <EmailSVG className="w-full" />
+          </div>
           <div className="mt-16 flex items-center">
             <span>
               <HiLocationMarker size={20} />
